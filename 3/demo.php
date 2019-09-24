@@ -19,7 +19,7 @@ fetch(req)
 */
 $ch = curl_init(); 
  // set url 
-curl_setopt($ch, CURLOPT_URL, "https://newsapi.org/v2/top-headlines?country=id&apiKey=6d4678ec56764048b013936199a51f5f"); 
+curl_setopt($ch, CURLOPT_URL, "https://newsapi.org/v2/everything?q=liverpool&apiKey=6d4678ec56764048b013936199a51f5f"); 
 
 //return the transfer as a string 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
@@ -29,7 +29,7 @@ $output = curl_exec($ch);
 
 curl_close($ch);
 $decoded = json_decode($output);
-// var_dump($decoded);
+var_dump($decoded);
 // $decoded= (array)$decoded;
 echo $decoded->articles[0]->urlToImage;
 echo '<ul>';

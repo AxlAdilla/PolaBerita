@@ -73,7 +73,9 @@ a:hover {
         <div class="search-icon">
             <i class="material-icons">search</i>
         </div>
-        <input type="text" placeholder="START TYPING...">
+        <form method="get" action="">
+            <input type="text" name="search" placeholder="START TYPING...">
+        </form>
         <div class="close-search">
             <i class="material-icons">close</i>
         </div>
@@ -132,12 +134,18 @@ a:hover {
             <div class="row clearfix align-center">
             <?php
                 $category='';
+                $search='';
                 if(isset($_GET['category'])){
                     $category= $_GET['category'];
                 }
+                $url= "https://newsapi.org/v2/top-headlines?country=id&category=".$category."&apiKey=6d4678ec56764048b013936199a51f5f";
+                if(isset($_GET['search'])){
+                    $search= $_GET['search'];
+                    $url= "https://newsapi.org/v2/everything?q=".$search."&sortBy=popularity&apiKey=6d4678ec56764048b013936199a51f5f";
+                }
                 $ch = curl_init(); 
                 // set url 
-                curl_setopt($ch, CURLOPT_URL, "https://newsapi.org/v2/top-headlines?country=id&category=".$category."&apiKey=6d4678ec56764048b013936199a51f5f"); 
+                curl_setopt($ch, CURLOPT_URL, $url); 
 
                 //return the transfer as a string 
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
