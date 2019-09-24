@@ -96,35 +96,6 @@ a:hover {
     </nav>
 
     <section class="content">
-        <div class="container-fluid">
-            <div class="block-header">
-                <h2>Kategori</h2>
-            </div>
-
-            <div style="display:flex;flex-direction:row">
-                <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <a href="" class="btn btn-primary" style="width:100%">BIsnis</a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <a href="" class="btn btn-primary" style="width:100%">Hiburan</a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <a href="" class="btn btn-primary" style="width:100%">Umum</a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <a href="" class="btn btn-primary" style="width:100%">Kesehatan</a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <a href="" class="btn btn-primary" style="width:100%">Sains</a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <a href="" class="btn btn-primary" style="width:100%">Olah Raga</a>
-                </div>
-                <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <a href="" class="btn btn-primary" style="width:100%">Teknologi</a>
-                </div>
-            </div>
-        </div>
         <div class="container-fluid m-t-20">
             <div class="block-header">
                 <h2>Berita Terpanas</h2>
