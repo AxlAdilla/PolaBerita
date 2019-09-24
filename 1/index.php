@@ -202,25 +202,27 @@ a:hover {
                             </div>
                         </div>
                     </div>
-                    <?php for($i=4;$i<20;$i++){ ?>
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <a target="_blank" href="<?php echo $decoded->articles[$i]->url ?>" style="color:black">
+                    <?php foreach ($decoded->articles as $i=>$val){ 
+                            if($i > 3){ ?>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <a target="_blank" href="<?php echo $val->url ?>" style="color:black">
 
-                            <div id="topNews" class="card" style="height:300px;overflow:hidden;">
-                                <div class="imgNews" class="body" style="background-image:url('<?php echo $decoded->articles[$i]->urlToImage ?>');">
+                                        <div id="topNews" class="card" style="height:300px;overflow:hidden;">
+                                            <div class="imgNews" class="body" style="background-image:url('<?php echo $val->urlToImage ?>');">
+                                            </div>
+                                            <div class="footer">
+                                                <h4>
+                                                    <?php echo $val->title ?>
+                                                </h4>
+                                                <p>
+                                                    <?php echo $val->description ?>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="footer">
-                                    <h4>
-                                        <?php echo $decoded->articles[$i]->title ?>
-                                    </h4>
-                                    <p>
-                                        <?php echo $decoded->articles[$i]->description ?>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <?php } ?>
+                        <?php }
+                    } ?>
                 </div>
             </div>
         </div>
